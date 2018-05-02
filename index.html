@@ -13,29 +13,42 @@
 </head>
 <body>
 	
-	<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
-		<a class="navbar-brand" href="#">Navbar</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
+	<header style="min-height: 3.5rem">
 		
-		<div id="navbar-content" class="collapse navbar-collapse">
-			<div class="navbar-nav">
-				<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-				<a class="nav-item nav-link" href="#">Features</a>
-				<a class="nav-item nav-link" href="#">Pricing</a>
-				<a class="nav-item nav-link disabled" href="#">Disabled</a>
+		<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+			<div class="container">
+				<a class="navbar-brand" href="#">Navbar</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				
+				<div id="navbar-content" class="collapse navbar-collapse">
+					<div class="navbar-nav">
+						<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+						<a class="nav-item nav-link" href="#">Features</a>
+						<a class="nav-item nav-link" href="#">Pricing</a>
+						<a class="nav-item nav-link disabled" href="#">Disabled</a>
+					</div>
+					<div class="navbar-nav ml-auto">
+						<span class="nav-item">Hello!</span>
+					</div>
+				</div>
 			</div>
-			<div class="navbar-nav ml-auto">
-				<span class="nav-item">Hello!</span>
-			</div>
+		</nav>
+		
+	</header>
+	
+	<main class="py-5">
+		
+		<div class="container">
+			Hello World!
 		</div>
-	</nav>
+		
+	</main>
 	
-	<div style="height: 4rem;"></div>
+	<footer>
+		
+	</footer>
 	
-	<div class="container pt-3">
-		Hello World!
-	</div>
 </body>
 </html>
