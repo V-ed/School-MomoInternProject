@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Git - Guillaume Marcoux</title>
+	
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 	
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
@@ -42,12 +43,38 @@
 		
 	</header>
 	
-	<main class="py-5">
-		
-		<div class="container" style="height: 1000px;">
-			Hello World!
+	<main class="py-4">
+		<div class="container">
+			
+			<section class="py-2">
+				
+				<h1>Introduction</h1>
+				
+				<p class="pt-2">Vous decouvrirez à travers la lecture de cette page l'outil de travail <span class="font-weight-bold">Git</span> ainsi que toutes ses particularités qui en fait un outil essentiel pour tout travail de programmation.</p>
+				
+			</section>
+			
+			<section class="py-2">
+				
+				<h1>Mais qu'est-ce que <span class="font-italic">Git</span> ?</h1>
+				
+				<div class="row pt-2">
+					<div class="col-md-3">
+						<img src="/images/git-logo-full.png" class="img-fluid">
+					</div>
+					<div class="col-md pt-4 pt-md-0">
+						<p class="text-justify">
+							Git est un outil de gestion de code source permettant un historique de version d'un programme ou tout autres fichiers de texte brut.
+							Git organise les version en faisant des "noeuds" (appelés <span class="font-weight-light font-italic">commits</span>) contenant les informations des modifications depuis le dernier noeud créé.
+							Ceci permet de plus de savoir plus facilement les modifications apportées à chacune des "versions" puisque chaque noeud doit être définit avec un résumé des modifications apportées.
+							Finalement, chaque noeud contient de plus les informations de l'auteur de ce dernier, ainsi, on peut savoir facilement qui a fait quoi lorsqu'on travail en équipe.
+						</p>
+					</div>
+				</div>
+				
+			</section>
+			
 		</div>
-		
 	</main>
 	
 	<footer>
@@ -55,10 +82,10 @@
 		<div class="d-flex bg-dark py-3 text-light">
 			<div class="container py-3">
 				<div class="row">
-					<div>
+					<div class="col-sm">
 						Document made with <span class="text-danger">&hearts;</span> by Guillaume Marcoux &copy; 2018
 					</div>
-					<div class="ml-auto">
+					<div class="col-sm text-right pt-4 pt-sm-0">
 						Site made using <a href="https://getbootstrap.com/">Bootstrap</a> <a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/">4.1</a>.
 					</div>
 				</div>
