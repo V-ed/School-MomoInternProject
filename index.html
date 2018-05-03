@@ -22,7 +22,7 @@
 		<nav id="navbar-top" class="navbar navbar-expand-lg nav-pills fixed-top navbar-dark bg-dark">
 			<div class="container">
 				<!-- <a class="navbar-brand" href="#">Navbar</a> -->
-				<a class="navbar-brand text-light">
+				<a class="navbar-brand text-light" href="/">
 					<img src="/images/git-icon-white.png" width="30" height="30" alt="">
 					Git
 				</a>
@@ -32,8 +32,16 @@
 				
 				<div id="navbar-content" class="collapse navbar-collapse">
 					<div class="navbar-nav">
-						<a class="nav-item nav-link" href="#introduction">Introduction</a>
-						<a class="nav-item nav-link" href="#what-is-git">C'est quoi Git?</a>
+						<a class="nav-item nav-link mx-1" href="#introduction">Introduction</a>
+						<div class="nav-item dropdown mx-1">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Sections
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="#what-is-git">C'est quoi Git?</a>
+								<a class="dropdown-item" href="#briefing">Un bref aperçu</a>
+							</div>
+						</div>
 					</div>
 					<div class="navbar-nav ml-auto">
 						<span class="nav-item navbar-text">Hello!</span>
@@ -70,12 +78,29 @@
 					<div class="col-md pt-4 pt-md-0">
 						<p>
 							Git est un outil de gestion de code source permettant un historique de version d'un programme ou tout autres fichiers de texte brut.
-							Git organise les version en faisant des "noeuds" (appelés <span class="font-weight-light font-italic">commits</span>) contenant les informations des modifications depuis le dernier noeud créé.
-							Ceci permet de plus de savoir plus facilement les modifications apportées à chacune des "versions" puisque chaque noeud doit être définit avec un résumé des modifications apportées.
-							Finalement, chaque noeud contient de plus les informations de l'auteur de ce dernier, ainsi, on peut savoir facilement qui a fait quoi lorsqu'on travail en équipe.
+							Git organise les version en faisant des "noeuds" (appelés <span class="font-weight-light font-italic">commits</span>) contenant les informations des modifications depuis le dernier <span class="font-italic">commit</span> créé.
+							Ceci permet de plus de savoir plus facilement les modifications apportées à chacune des "versions" puisque chaque <span class="font-italic">commit</span> doit être définit avec un résumé des modifications apportées.
+							Finalement, chaque <span class="font-italic">commit</span> contient de plus les informations de l'auteur de ce dernier, ainsi, on peut savoir facilement qui a fait quoi lorsqu'on travail en équipe.
 						</p>
 					</div>
 				</div>
+				
+			</section>
+			
+			<section class="py-2">
+				
+				<h2 id="briefing" class="text-left">Un bref aperçu avant de plonger dans la matière</h2>
+				
+				<div class="py-3">
+					<img src="/images/branches.svg" alt="Aperçu des branches de git">
+				</div>
+				
+				<p>
+					Commençant par la gauche, chacun des cercles ici est un commit. Les commits qui divergent de la ligne du millieu forments des "branches", un concept permettant de travailler en parallèle sur différentes tâches sans affecter la version principale.
+				</p>
+				<p>
+					Ne vous inquiétez pas, vous allez comprendres pourquoi les commits font de tels chemins en continuant votre lecture!
+				</p>
 				
 			</section>
 			
