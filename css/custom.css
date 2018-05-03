@@ -23,3 +23,13 @@ h6[id]::before
 	position: relative;
 	width: 100%;
 }
+
+.title-resizable {
+	font-size: 7.2rem;
+}
+
+@media (max-width: 767.98px) {
+	.title-resizable {
+		font-size: 15vw;
+	}
+}
