@@ -1,0 +1,17 @@
+h1[id]::before,
+h2[id]::before,
+h3[id]::before,
+h4[id]::before,
+h5[id]::before,
+h6[id]::before
+{
+	display: block;
+	height: 5rem;
+	margin-top: -5rem;
+	visibility: hidden;
+	content: ""
+}
+
+.anchorjs-link {
+	text-decoration: none !important;
+}
