@@ -41,6 +41,7 @@
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 								<a class="dropdown-item" href="#what-is-git">C'est quoi Git?</a>
 								<a class="dropdown-item" href="#briefing">Un bref aperçu</a>
+								<a class="dropdown-item" href="#distributed">Un système distribué</a>
 							</div>
 						</div>
 					</div>
@@ -76,9 +77,12 @@
 					<div class="col-md pt-4 pt-md-0">
 						<p>
 							Git est un outil de gestion de code source permettant un historique de version d'un programme ou tout autres fichiers de texte brut.
-							Git organise les version en faisant des "noeuds" (appelés <span class="font-weight-light font-italic">commits</span>) contenant les informations des modifications depuis le dernier <span class="font-italic">commit</span> créé.
+							Git organise les version en faisant des "noeuds" (appelés <span class="font-weight-bold font-italic">commits</span>) contenant les informations des modifications depuis le dernier <span class="font-italic">commit</span> créé.
 							Ceci permet de plus de savoir plus facilement les modifications apportées à chacune des "versions" puisque chaque <span class="font-italic">commit</span> doit être définit avec un résumé des modifications apportées.
 							Finalement, chaque <span class="font-italic">commit</span> contient de plus les informations de l'auteur de ce dernier, ainsi, on peut savoir facilement qui a fait quoi lorsqu'on travail en équipe.
+						</p>
+						<p class="lead">
+							Vous pouvez télécharger / installer git <a href="https://git-scm.com/" target="_blank">ici</a>!
 						</p>
 					</div>
 				</div>
@@ -87,7 +91,7 @@
 			
 			<section class="py-2">
 				
-				<h2 id="briefing" class="text-left">Un bref aperçu avant de plonger dans la matière</h2>
+				<h2 id="briefing" class="text-left">Un bref aperçu avant de plonger dans le coeur de git</h2>
 				
 				<div class="py-3">
 					<img src="/images/branches.svg" alt="Aperçu des branches de git">
@@ -98,6 +102,23 @@
 				</p>
 				<p>
 					Ne vous inquiétez pas, vous allez comprendres pourquoi les commits font de tels chemins en continuant votre lecture!
+				</p>
+				
+			</section>
+			
+			<section class="py-2">
+				
+				<h2 id="distributed" class="text-left">Un système distribué</h2>
+				
+				<p class="pt-2">
+					Git est un système distribué, ce qui signifie qu'il peut communiquer avec d'autres instances pour synchroniser les changements effectués par différents collègues.
+					Ceci est dû au fait que toutes les informations de git sont dans un dossier local du projet : quand le dossier du projet est gérer par git, on appele ce dossier un <span class="font-weight-bold font-italic">repository</span>.
+					De plus, grâce à ce système, ce <span class="font-italic">repository</span> peut être transféré sur un serveur distant et ainsi, chaque personne peut travailler à distance et tout de même avoir un accès au modifications effectuées par les autres : ils n'ont qu'à faire un lien entre leur <span class="font-italic">repository</span> locale et le <span class="font-italic">repository</span> mis sur le server.
+				</p>
+				<p>
+					Oui, cela veut aussi dire que l'on peut travailler sur le projet sans avoir de connection à l'internet, puisque tout les fichiers sont sur notre machine!
+					<br>
+					Évidemment, pour ensuite synchroniser les changements avec ceux des collègues, il faudra une connection quelconque avec leur travail, mais cela n'est pas obligé d'être à travers l'internet : dès qu'il y a une connection entre les deux machines, la synchronisation sera possible (donc LAN, serveur interne, etc sont aussi des solutions possibles).
 				</p>
 				
 			</section>
