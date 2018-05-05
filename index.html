@@ -15,6 +15,7 @@
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" defer></script>
 	<script src="/js/close-navbar.js" defer></script>
+	<script src="/js/loadings.js" defer></script>
 </head>
 <body class="text-justify" data-spy="scroll" data-target="#navbar-top">
 	
@@ -22,7 +23,6 @@
 		
 		<nav id="navbar-top" class="navbar navbar-expand-lg nav-pills fixed-top navbar-dark bg-dark">
 			<div class="container">
-				<!-- <a class="navbar-brand" href="#">Navbar</a> -->
 				<a class="navbar-brand text-light" href="/">
 					<img src="/images/git-icon-white.png" width="30" height="30" alt="">
 					Git
@@ -46,7 +46,16 @@
 								<a class="dropdown-item" href="/#commands">Les commandes</a>
 							</div>
 						</div>
+						<div class="nav-item dropdown m-1 my-lg-0">
+							<a class="nav-link dropdown-toggle px-2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Commandes
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="/commands/repository.html#init">init</a>
+							</div>
+						</div>
 						<a class="nav-item nav-link m-1 my-lg-0 px-2" href="/flows.html">Flux de travail</a>
+						<a class="nav-item nav-link m-1 my-lg-0 px-2" href="/guis.html">Programmes pour gérer git</a>
 					</div>
 				</div>
 			</div>
@@ -131,10 +140,10 @@
 				<h2 id="branches" class="text-left">Les branches</h2>
 				
 				<p class="pt-2">
-					Le concepte des branche est très important dans tout projet git.
+					Le concepte des branches est très important dans tout projet git.
 					En fait, dès que le projet est gérer par git, ce projet est dans une branche.
 					Comme vous avez vu dans l'<a href="#briefing">image plus haut</a>, un projet git ressemble beaucoup à des branches d'un arbre, certaines sortant du tronc de l'arbre et d'autres des branches elles-mêmes.
-					En gardant cette image en tête, la logique des branches dans git devient très facile à comprendre : une branche sert à faire avancer un projet sans apporter d'impacts à la branche principale, donc de pouvoir travailler en parallèle.
+					En gardant l'image de l'arbre en tête, la logique des branches dans git devient très facile à comprendre : une branche sert à faire avancer un projet sans apporter d'impacts à la branche principale, donc de pouvoir travailler en parallèle.
 				</p>
 				
 				<h3 class="h5">Travailler en parallèle, ça sert à quoi?</h3>
@@ -155,6 +164,51 @@
 				
 			</section>
 			
+			<section class="py-2">
+				
+				<h2 id="commands" class="text-left">Les commandes</h2>
+				
+				<p class="py-2">
+					Il faut, sans surprises, des commandes pour gérer tout projet utilisant git.
+					<br>
+					Voici une liste de commandes disponibles groupées selon leur catégories (PS : survolez les catégories pour avoir un bref résumé et cliquez sur les commandes pour en savoir plus!) :
+				</p>
+				
+				<div class="table-responsive">
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th class="align-middle" data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">Gestion Repository</th>
+								<th class="align-middle" data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">Gestion Commits</th>
+								<th class="align-middle" data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">Branches</th>
+								<th class="align-middle" data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">Synchronisation</th>
+							</tr>
+						</thead>
+						<tbody class="text-center">
+							<tr>
+								<td><a href="/commands/repository.html#init">init</a></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="/commands/repository.html#clone">clone</a></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><a href="/commands/repository.html#log">log</a></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+			</section>
+			
 		</div>
 	</main>
 	
@@ -172,12 +226,6 @@
 				</div>
 			</div>
 		</div>
-		
-		<script>
-			document.addEventListener("DOMContentLoaded", function(event) {
-				anchors.add();
-			});
-		</script>
 		
 	</footer>
 	
