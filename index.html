@@ -33,17 +33,20 @@
 				
 				<div id="navbar-content" class="collapse navbar-collapse">
 					<div class="navbar-nav">
-						<a class="nav-item nav-link m-1 my-lg-0 px-2" href="#introduction">Introduction</a>
+						<a class="nav-item nav-link m-1 my-lg-0 px-2" href="/#introduction">Introduction</a>
 						<div class="nav-item dropdown m-1 my-lg-0">
 							<a class="nav-link dropdown-toggle px-2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								Sections
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="#what-is-git">C'est quoi Git?</a>
-								<a class="dropdown-item" href="#briefing">Un bref aperçu</a>
-								<a class="dropdown-item" href="#distributed">Un système distribué</a>
+								<a class="dropdown-item" href="/#what-is-git">C'est quoi Git?</a>
+								<a class="dropdown-item" href="/#briefing">Un bref aperçu</a>
+								<a class="dropdown-item" href="/#distributed">Un système distribué</a>
+								<a class="dropdown-item" href="/#branches">Les branches</a>
+								<a class="dropdown-item" href="/#commands">Les commandes</a>
 							</div>
 						</div>
+						<a class="nav-item nav-link m-1 my-lg-0 px-2" href="/flows.html">Flux de travail</a>
 					</div>
 				</div>
 			</div>
@@ -119,6 +122,35 @@
 					Oui, cela veut aussi dire que l'on peut travailler sur le projet sans avoir de connection à l'internet, puisque tout les fichiers sont sur notre machine!
 					<br>
 					Évidemment, pour ensuite synchroniser les changements avec ceux des collègues, il faudra une connection quelconque avec leur travail, mais cela n'est pas obligé d'être à travers l'internet : dès qu'il y a une connection entre les deux machines, la synchronisation sera possible (donc LAN, serveur interne, etc sont aussi des solutions possibles).
+				</p>
+				
+			</section>
+			
+			<section class="py-2">
+				
+				<h2 id="branches" class="text-left">Les branches</h2>
+				
+				<p class="pt-2">
+					Le concepte des branche est très important dans tout projet git.
+					En fait, dès que le projet est gérer par git, ce projet est dans une branche.
+					Comme vous avez vu dans l'<a href="#briefing">image plus haut</a>, un projet git ressemble beaucoup à des branches d'un arbre, certaines sortant du tronc de l'arbre et d'autres des branches elles-mêmes.
+					En gardant cette image en tête, la logique des branches dans git devient très facile à comprendre : une branche sert à faire avancer un projet sans apporter d'impacts à la branche principale, donc de pouvoir travailler en parallèle.
+				</p>
+				
+				<h3 class="h5">Travailler en parallèle, ça sert à quoi?</h3>
+				
+				<p>
+					Ceci permet au projet d'avoir des versions finales qui sont différentes les unes des autres.
+					En effet, on peut penser à un programme qui a une version stable, une version <span class="font-italic">beta</span> et même une version <span class="font-italic">alpha</span> : toutes ces versions pourraient être sur des branches différentes, faisant en sorte que la branche stable n'est pas affectée par le dévelopement effectué dans la branche <span class="font-italic">alpha</span>, dans cet exemple.
+					Cette séparation de version permet ainsi un plus grand contrôle sur les mises à jour des programmes, tout en laissant place au travail effectué sur ce même programme en parallèle.
+				</p>
+				
+				<h3 class="h5">La liberté dans la gestion des branches</h3>
+				
+				<p>
+					Grâce à l'implémentation abstraite du concepte des branches dans le système de git, chaque équipe peut décider comment elles gèrent leur branches, ce qui leur permettra d'avoir leur propre flux de travail.
+					Plusieurs modèles des branchage existe déjà, étant conçues pour être plus productif, réduire les problèmes de synchronisation ou simplement aider les équipes à avoir une méthode de travail cohérente et unifiée.
+					Plus de détails sur les modèles de branches sont discutés <a href="/flows.html">dans cette page</a>.
 				</p>
 				
 			</section>
