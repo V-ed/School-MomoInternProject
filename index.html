@@ -27,7 +27,7 @@
 		
 		<nav id="navbar-top" class="navbar navbar-expand-lg nav-pills fixed-top navbar-dark bg-dark">
 			<div class="container">
-				<a class="navbar-brand text-light" href="/">
+				<a class="navbar-brand text-light" href="./">
 					<img src="./images/git-icon-white.png" width="30" height="30" alt="">
 					Git
 				</a>
@@ -50,6 +50,8 @@
 								<a class="dropdown-item" href="#distributed">Un système distribué</a>
 								<a class="dropdown-item" href="#branches">Les branches</a>
 								<a class="dropdown-item" href="#commands">Les commandes</a>
+								<a class="dropdown-item" href="#visual-aid">Le fonctionnement en image</a>
+								<a class="dropdown-item" href="#guis">Résumé des programmes pour gérer git</a>
 							</div>
 						</li>
 						<li class="nav-item dropdown m-1 my-lg-0">
@@ -305,6 +307,33 @@
 						</tbody>
 					</table>
 				</div>
+				
+			</section>
+			
+			<section class="py-2">
+				
+				<h2 id="visual-aid" class="text-left">Un aperçu visuel du fonctionnement de git</h2>
+				
+				<p class="pt-2">
+					Avec les commandes ci-haut, voici à quoi ressemble le fonctionnement de git, pour les visuels!
+				</p>
+				
+				<div class="py-3">
+					<img class="img-fluid d-block mx-auto" src="./images/HowGitWorksBackground.jpg" alt="Aperçu du fonctionnement de git">
+				</div>
+				
+				<p>
+					Il est ici plus facile de comprendre le fonctionnement de git en ayant en tête les commandes :
+					<ol style="line-height: 1.7rem">
+						<li>On fait des modifications dans le <mark>workspace</mark> (le dossier local du projet);</li>
+						<li>On ajoute (<kbd>add</kbd>) ces modifications dans <mark>l'index</mark>, une place qui prépare les modifications à être m'être dans un commit;</li>
+						<li>On effectue un <kbd>commit</kbd>, préférablement avec un message utile, qui lui va aller dans le <mark>repository locale</mark>;</li>
+						<li>On effectue un <kbd>push</kbd> vers le <mark>repository partagé</mark>;</li>
+						<hr>
+						<li>(optionnel) On peut <kbd>fetch</kbd> pour dire à notre <mark>repository locale</mark> s'il y a des modifications dans le <mark>repository partagé</mark>;</li>
+						<li>Dans le cas où des modifications sont présentes dans le <mark>repository partagé</mark>, on peut <kbd>pull</kbd> pour ajouter les modifications distantes dans notre <mark>workspace</mark> et donc avoir les nouvelles modifications localement.</li>
+					</ol>
+				</p>
 				
 			</section>
 			
