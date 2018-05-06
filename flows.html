@@ -7,14 +7,19 @@
 	<title>Git - Guillaume Marcoux</title>
 	
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="stylesheet" href="./css/bootstrap-4-navbar.css">
+	
+	<link rel="stylesheet" href="./css/custom.css">
 	
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous" defer></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous" defer></script>
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" defer></script>
-	<script src="/js/close-navbar.js" defer></script>
+	<script src="./js/close-navbar.js" defer></script>
+	<script src="./js/loadings.js" defer></script>
+	
+	<script src="./js/bootstrap-4-navbar.js" defer></script>
 </head>
 <body class="text-justify" data-spy="scroll" data-target="#navbar-top">
 	
@@ -23,7 +28,7 @@
 		<nav id="navbar-top" class="navbar navbar-expand-lg nav-pills fixed-top navbar-dark bg-dark">
 			<div class="container">
 				<a class="navbar-brand text-light" href="/">
-					<img src="/images/git-icon-white.png" width="30" height="30" alt="">
+					<img src="./images/git-icon-white.png" width="30" height="30" alt="">
 					Git
 				</a>
 				<button id="navbar-toggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,8 +37,8 @@
 				
 				<div id="navbar-content" class="collapse navbar-collapse">
 					<ul class="navbar-nav">
-						<li class="nav-item m-1 my-lg-0 px-2 px-lg-0">
-							<a class="nav-link" href="#introduction">Introduction</a>
+						<li class="nav-item m-1 my-lg-0">
+							<a class="nav-link px-2 px-lg-0" href="#introduction">Introduction</a>
 						</li>
 						<li class="nav-item dropdown m-1 my-lg-0">
 							<a class="nav-link dropdown-toggle px-2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -48,18 +53,49 @@
 							</div>
 						</li>
 						<li class="nav-item dropdown m-1 my-lg-0">
-							<a class="nav-link dropdown-toggle px-2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<a class="nav-link dropdown-toggle px-2" href="#" id="navbarDropdownCommands" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								Commandes
 							</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="/commands/repository.html#init">init</a>
-							</div>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdownCommands">
+								<li>
+									<a class="dropdown-item dropdown-toggle" href="">Repository</a>
+									<ul class="dropdown-menu mx-3 mx-lg-0">
+										<li>
+											<a class="dropdown-item" href="./commands/repository.html#init">init</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="./commands/repository.html#clone">clone</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="./commands/repository.html#log">log</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a class="dropdown-item dropdown-toggle" href="">Commits</a>
+									<ul class="dropdown-menu mx-3 mx-lg-0">
+										
+									</ul>
+								</li>
+								<li>
+									<a class="dropdown-item dropdown-toggle" href="">Branches</a>
+									<ul class="dropdown-menu mx-3 mx-lg-0">
+										
+									</ul>
+								</li>
+								<li>
+									<a class="dropdown-item dropdown-toggle" href="">Synchronisation</a>
+									<ul class="dropdown-menu mx-3 mx-lg-0">
+										
+									</ul>
+								</li>
+							</ul>
 						</li>
-						<li class="nav-item m-1 my-lg-0 px-2 px-lg-0">
-							<a class="nav-link" href="/flows.html">Flux de travail</a>
+						<li class="nav-item m-1 my-lg-0">
+							<a class="nav-link px-2 px-lg-0" href="./flows.html">Flux de travail</a>
 						</li>
-						<li class="nav-item m-1 my-lg-0 px-2 px-lg-0">
-							<a class="nav-link" href="/guis.html">Programmes pour gérer git</a>
+						<li class="nav-item m-1 my-lg-0">
+							<a class="nav-link px-2 px-lg-0" href="./guis.html">Programmes pour gérer git</a>
 						</li>
 					</ul>
 				</div>
@@ -90,12 +126,6 @@
 				</div>
 			</div>
 		</div>
-		
-		<script>
-			document.addEventListener("DOMContentLoaded", function(event) {
-				anchors.add();
-			});
-		</script>
 		
 	</footer>
 	
