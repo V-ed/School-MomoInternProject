@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Git - Guillaume Marcoux</title>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link rel="stylesheet" href="/css/custom.css">
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous" defer></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous" defer></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" defer></script>
+	<script src="/js/close-navbar.js" defer></script>
+</head>
+<body class="text-justify" data-spy="scroll" data-target="#navbar-top">
+	
+	<header style="min-height: 3.6rem">
+		
+		<nav id="navbar-top" class="navbar navbar-expand-lg nav-pills fixed-top navbar-dark bg-dark">
+			<div class="container">
+				<a class="navbar-brand text-light" href="/">
+					<img src="./images/git-icon-white.png" width="30" height="30" alt="">
+					Git
+				</a>
+				<button id="navbar-toggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				
+				<div id="navbar-content" class="collapse navbar-collapse">
+					<ul class="navbar-nav">
+						<li class="nav-item m-1 my-lg-0">
+							<a class="nav-link px-2" href="#introduction">Introduction</a>
+						</li>
+						<li class="nav-item dropdown m-1 my-lg-0">
+							<a class="nav-link dropdown-toggle px-2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Sections
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="#what-is-git">C'est quoi Git?</a>
+								<a class="dropdown-item" href="#briefing">Un bref aperçu</a>
+								<a class="dropdown-item" href="#distributed">Un système distribué</a>
+								<a class="dropdown-item" href="#branches">Les branches</a>
+								<a class="dropdown-item" href="#commands">Les commandes</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown m-1 my-lg-0">
+							<a class="nav-link dropdown-toggle px-2" href="#" id="navbarDropdownCommands" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Commandes
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdownCommands">
+								<li>
+									<a class="dropdown-item dropdown-toggle" href="">Repository</a>
+									<ul class="dropdown-menu mx-3 mx-lg-0">
+										<li>
+											<a class="dropdown-item" href="./commands/repository.html#init"><kbd>init</kbd></a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="./commands/repository.html#clone"><kbd>clone</kbd></a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="./commands/repository.html#log"><kbd>log</kbd></a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="./commands/repository.html#diff"><kbd>diff</kbd></a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="./commands/repository.html#remote"><kbd>remote</kbd></a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="./commands/repository.html#status"><kbd>status</kbd></a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a class="dropdown-item dropdown-toggle" href="">Commits</a>
+									<ul class="dropdown-menu mx-3 mx-lg-0">
+										<li>
+											<a class="dropdown-item" href="./commands/commits.html#add"><kbd>add</kbd></a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="./commands/commits.html#reset"><kbd>reset</kbd></a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="./commands/commits.html#commit"><kbd>commit</kbd></a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="./commands/commits.html#tag"><kbd>tag</kbd></a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="./commands/commits.html#stash"><kbd>stash</kbd></a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a class="dropdown-item dropdown-toggle" href="">Branches</a>
+									<ul class="dropdown-menu mx-3 mx-lg-0">
+										<li>
+											<a class="dropdown-item" href="./commands/branches.html#branch"><kbd>branch</kbd></a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="./commands/branches.html#checkout"><kbd>checkout</kbd></a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a class="dropdown-item dropdown-toggle" href="">Synchronisation</a>
+									<ul class="dropdown-menu mx-3 mx-lg-0">
+										<li>
+											<a class="dropdown-item" href="./commands/sync.html#fetch"><kbd>fetch</kbd></a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="./commands/sync.html#pull"><kbd>pull</kbd></a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="./commands/sync.html#push"><kbd>push</kbd></a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="./commands/sync.html#merge"><kbd>merge</kbd></a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="./commands/sync.html#mergetool"><kbd>mergetool</kbd></a></td>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item m-1 my-lg-0">
+							<a class="nav-link px-2" href="./flows.html">Flux de travail</a>
+						</li>
+						<li class="nav-item m-1 my-lg-0">
+							<a class="nav-link px-2" href="./guis.html">Programmes pour gérer git</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+	</header>
+	
+	<main class="py-4">
+		<div class="container">
+			
+			Todo
+			
+		</div>
+	</main>
+	
+	<footer>
+		
+		<div class="d-flex bg-dark py-3 text-light">
+			<div class="container py-3">
+				<div class="row">
+					<div class="col-sm">
+						Document made with <span class="text-danger">&hearts;</span> by Guillaume Marcoux &copy; 2018
+					</div>
+					<div class="col-sm text-right pt-4 pt-sm-0">
+						Site made using <a href="https://getbootstrap.com/">Bootstrap</a> <a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/">4.1</a>.
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</footer>
+	
+</body>
+</html>
