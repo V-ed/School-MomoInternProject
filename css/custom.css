@@ -12,8 +12,14 @@ h6[id]::before
 	content: ""
 }
 
-.anchorjs-link {
+.anchorjs-link,
+.no-deco
+{
 	text-decoration: none !important;
+}
+
+.clickable {
+	cursor: pointer;
 }
 
 .image-container {

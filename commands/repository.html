@@ -18,12 +18,13 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" defer></script>
 	<script src="../js/close-navbar.js" defer></script>
 	<script src="../js/loadings.js" defer></script>
+	<script src="../js/sidebar-size.js" defer></script>
 	
 	<script src="../js/bootstrap-4-navbar.js" defer></script>
 </head>
 <body class="text-justify" data-spy="scroll" data-target="#navbar-top">
 	
-	<header style="min-height: 3.6rem">
+	<header id="sticky-header" style="min-height: 3.6rem">
 		
 		<nav id="navbar-top" class="navbar navbar-expand-lg nav-pills fixed-top navbar-dark bg-dark">
 			<div class="container">
@@ -41,7 +42,7 @@
 							<a class="nav-link px-2" href="../#introduction">Introduction</a>
 						</li>
 						<li class="nav-item dropdown m-1 my-lg-0">
-							<a class="nav-link dropdown-toggle px-2" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<a class="nav-link dropdown-toggle px-2 clickable" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								Sections
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -55,12 +56,12 @@
 							</div>
 						</li>
 						<li class="nav-item dropdown m-1 my-lg-0">
-							<a class="nav-link dropdown-toggle px-2" href="" id="navbarDropdownCommands" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<a class="nav-link dropdown-toggle px-2 clickable" id="navbarDropdownCommands" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								Commandes
 							</a>
 							<ul class="dropdown-menu" aria-labelledby="navbarDropdownCommands">
 								<li>
-									<a class="dropdown-item dropdown-toggle" href="">Repository</a>
+									<a class="dropdown-item dropdown-toggle" href="./repository.html">Repository</a>
 									<ul class="dropdown-menu mx-3 mx-lg-0">
 										<li>
 											<a class="dropdown-item" href="./repository.html#init"><kbd>init</kbd></a>
@@ -83,7 +84,7 @@
 									</ul>
 								</li>
 								<li>
-									<a class="dropdown-item dropdown-toggle" href="">Commits</a>
+									<a class="dropdown-item dropdown-toggle" href="./commits.html">Commits</a>
 									<ul class="dropdown-menu mx-3 mx-lg-0">
 										<li>
 											<a class="dropdown-item" href="./commits.html#add"><kbd>add</kbd></a>
@@ -103,7 +104,7 @@
 									</ul>
 								</li>
 								<li>
-									<a class="dropdown-item dropdown-toggle" href="">Branches</a>
+									<a class="dropdown-item dropdown-toggle" href="./branches.html">Branches</a>
 									<ul class="dropdown-menu mx-3 mx-lg-0">
 										<li>
 											<a class="dropdown-item" href="./branches.html#branch"><kbd>branch</kbd></a>
@@ -114,7 +115,7 @@
 									</ul>
 								</li>
 								<li>
-									<a class="dropdown-item dropdown-toggle" href="">Synchronisation</a>
+									<a class="dropdown-item dropdown-toggle" href="./sync.html">Synchronisation</a>
 									<ul class="dropdown-menu mx-3 mx-lg-0">
 										<li>
 											<a class="dropdown-item" href="./sync.html#fetch"><kbd>fetch</kbd></a>
@@ -148,13 +149,148 @@
 		
 	</header>
 	
-	<main class="py-4">
-		<div class="container">
+	<div class="row w-100 mx-0">
+		
+		<div class="col-3 d-none d-lg-inline px-0">
 			
-			Todo
+			<nav class="navbar navbar-light bg-light sticky">
+				
+				<div class="m-auto py-2 flex-column">
+					
+					<span class="lead">Accès rapides aux commandes</span>
+					
+					<div id="test" class="py-2">
+						
+						<ul class="list-group">
+							<li class="list-group-item">
+								<a class="lead dropdown-toggle no-deco" href="#collapseRepository" data-toggle="collapse" data-parent="#sidebarContent">Repository</a>
+								<div id="collapseRepository" class="mt-2 collapse" data-parent="#test">
+									<a class="list-group-item" href="./repository.html#init"><kbd>init</kbd></a>
+									<a class="list-group-item" href="./repository.html#clone"><kbd>clone</kbd></a>
+									<a class="list-group-item" href="./repository.html#log"><kbd>log</kbd></a>
+									<a class="list-group-item" href="./repository.html#diff"><kbd>diff</kbd></a>
+									<a class="list-group-item" href="./repository.html#remote"><kbd>remote</kbd></a>
+									<a class="list-group-item" href="./repository.html#status"><kbd>status</kbd></a>
+								</div>
+							</li>
+							<li class="list-group-item">
+								<a class="lead dropdown-toggle no-deco" href="#collapseCommits" data-toggle="collapse" data-parent="#sidebarContent">Commits</a>
+								<div id="collapseCommits" class="mt-2 collapse" data-parent="#test">
+									<a class="list-group-item" href="./commits.html#add"><kbd>add</kbd></a>
+									<a class="list-group-item" href="./commits.html#reset"><kbd>reset</kbd></a>
+									<a class="list-group-item" href="./commits.html#commit"><kbd>commit</kbd></a>
+									<a class="list-group-item" href="./commits.html#tag"><kbd>tag</kbd></a>
+									<a class="list-group-item" href="./commits.html#stash"><kbd>stash</kbd></a>
+								</div>
+							</li>
+							<li class="list-group-item">
+								<a class="lead dropdown-toggle no-deco" href="#collapseBranches" data-toggle="collapse" data-parent="#sidebarContent">Branches</a>
+								<div id="collapseBranches" class="mt-2 collapse" data-parent="#test">
+									<a class="list-group-item" href="./branches.html#branch"><kbd>branch</kbd></a>
+									<a class="list-group-item" href="./branches.html#checkout"><kbd>checkout</kbd></a>
+								</div>
+							</li>
+							<li class="list-group-item">
+								<a class="lead dropdown-toggle no-deco" href="#collapseSynchronisation" data-toggle="collapse" data-parent="#sidebarContent">Synchronisation</a>
+								<div id="collapseSynchronisation" class="mt-2 collapse" data-parent="#test">
+									<a class="list-group-item" href="./sync.html#fetch"><kbd>fetch</kbd></a>
+									<a class="list-group-item" href="./sync.html#pull"><kbd>pull</kbd></a>
+									<a class="list-group-item" href="./sync.html#push"><kbd>push</kbd></a>
+									<a class="list-group-item" href="./sync.html#merge"><kbd>merge</kbd></a>
+									<a class="list-group-item" href="./sync.html#mergetool"><kbd>mergetool</kbd></a>
+								</div>
+							</li>
+						</ul>
+						
+					</div>
+					
+				</div>
+				
+			</nav>
 			
 		</div>
-	</main>
+		
+		<div class="col">
+			
+			<main id="sticky-container" class="py-4">
+				<div class="container">
+					
+					<section class="py-2">
+						
+						<h2 id="introduction" class="text-left">Commandes pour gérer le <span class="font-italic">repository</span></h2>
+						
+						<p class="pt-2">
+							Todo
+						</p>
+						
+					</section>
+					
+					<section class="py-2">
+						
+						<h2 id="init" class="text-left"><code>git init</code></h2>
+						
+						<p class="pt-2">
+							Todo
+						</p>
+						
+					</section>
+					
+					<section class="py-2">
+						
+						<h2 id="clone" class="text-left"><code>git clone</code></h2>
+						
+						<p class="pt-2">
+							Todo
+						</p>
+						
+					</section>
+					
+					<section class="py-2">
+						
+						<h2 id="log" class="text-left"><code>git log</code></h2>
+						
+						<p class="pt-2">
+							Todo
+						</p>
+						
+					</section>
+					
+					<section class="py-2">
+						
+						<h2 id="diff" class="text-left"><code>git diff</code></h2>
+						
+						<p class="pt-2">
+							Todo
+						</p>
+						
+					</section>
+					
+					<section class="py-2">
+						
+						<h2 id="remote" class="text-left"><code>git remote</code></h2>
+						
+						<p class="pt-2">
+							Todo
+						</p>
+						
+					</section>
+					
+					<section class="py-2">
+						
+						<h2 id="status" class="text-left"><code>git status</code></h2>
+						
+						<p class="pt-2">
+							Todo
+						</p>
+						
+					</section>
+					
+				</div>
+			</main>
+			
+		</div>
+		
+	</div>
 	
 	<footer>
 		
