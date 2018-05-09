@@ -10,13 +10,19 @@ $(function () {
 	
 	$stickies.each(function () {
 		
-		$(this).css({
+		var cssData = {
 			"position": "sticky",
 			"top": stickyHeaderHeight + "px",
 			"height": "calc(100vh - " + stickyHeaderHeight + "px)",
 			"max-height": stickyContainerHeight + "px",
 			"overflow-y": "auto"
-		});
+		};
+		
+		if ($(this).data("sticky-restrain") == false) {
+			delete cssData["max-height"];
+		}
+		
+		$(this).css(cssData);
 		
 	});
 	
