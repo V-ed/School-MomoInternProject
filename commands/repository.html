@@ -250,6 +250,8 @@
 						<p class="pt-2">
 							Cette commande sert à initialiser le repository local.
 							En effet, on ne l'utilise qu'au début, et son utilitée après la création du repository est plutôt nulle.
+							<br>
+							Bref, cette commande est le début d'un projet!
 						</p>
 						<p class="mb-0">
 							<a class="h-100" href="https://git-scm.com/docs/git-init" target="_blank">En savoir plus <img class="pl-1" src="../images/link-external.png" alt="" height="10"></a>
@@ -265,6 +267,8 @@
 							Cette commande sert à cloner un repository vers un dossier local.
 							En disant "cloner" ici, on réfère au fait que l'on télécharge* une copie d'un repository externe sur sa machine.
 							Donc, faire un <kbd>git clone</kbd> est prendre un repository déjà existant.
+							<br>
+							Bref, cette commande sert à accéder à un projet déjà en cours!
 						</p>
 						<p>
 							* un téléchargement n'est pas obligatoire cependant : on peut cloner un repository déjà sur notre machine!
@@ -280,7 +284,24 @@
 						<h2 id="log" class="text-left"><code>git log</code></h2>
 						
 						<p class="pt-2">
-							Todo
+							Cette commande sert à visualiser les commits créés dans chacune des branches, un peu comme l'image suivante représente :
+						</p>
+						<div class="py-2">
+							<img class="img-fluid d-block mx-auto" src="../images/branches.svg" alt="Aperçu du fonctionnement de git">
+						</div>
+						<p>
+							Cette commande est donc utile pour connaître le status de chacune des branches et voir les anciens commits et leurs détails.
+							<br>
+							Cependant, utiliser directement <kbd>git log</kbd> affiche beaucoup de texte et parfois, il est plus intéressant de voir le status des branches, et non des commits.
+							Ainsi, il serait parfois préférable d'ajouter des options pour ne voir qu'un résumé des commits et un status visuel pour mieux visualiser les branches :
+							<br>
+							<kbd>git log --graph --oneline --all</kbd> Voici un exemple plus visuel :
+						</p>
+						<div class="pb-2">
+							<img class="img-fluid d-block mx-auto" src="../images/git_log.png" alt="Différences de git log">
+						</div>
+						<p class="mb-0">
+							<a class="h-100" href="https://git-scm.com/docs/git-log" target="_blank">En savoir plus <img class="pl-1" src="../images/link-external.png" alt="" height="10"></a>
 						</p>
 						
 					</section>
