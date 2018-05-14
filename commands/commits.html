@@ -254,7 +254,16 @@
 						<h2 id="add" class="text-left"><code>git add</code></h2>
 						
 						<p class="pt-2">
-							Todo
+							Cette commande sert à ajouter dans l'index les modifications dans le dossier locale.
+							Dans l'image en haut, cette commande équivaut à la flèche bleue : passer du <mark>workspace</mark> à l'<mark>index</mark>.
+							Cela veut donc dire que grâce à cette commande, on indique à git : "<span class="lead">je suis prêt à mettre ces modifications dans le repository, donc prépare-les à être mis dans un commit</span>".
+						</p>
+						<p>
+							Il est important de savoir que cette commande fonctionne en prenant le nom du fichier à mettre dans l'index grâce aux arguments : <kbd>git add index.html</kbd>.
+							Dans le cas où nous somme prêt à mettre tout les fichiers modifiés dans l'index, nous pouvons utiliser le paramètre <kbd>-A</kbd> (<small>ou <kbd>--all</kbd></small>) : <kbd>git add -A</kbd>.
+						</p>
+						<p>
+							Bref, cette commande prépare un commit sans le créer : c'est la première étape pour pouvoir créer un commit contenant les modifications souhaitées.
 						</p>
 						<p class="mb-0">
 							<a href="https://git-scm.com/docs/git-add" target="_blank">En savoir plus <img class="pl-1" src="../images/link-external.png" alt="" height="10"></a>
