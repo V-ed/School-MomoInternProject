@@ -276,7 +276,21 @@
 						<h2 id="reset" class="text-left"><code>git reset</code></h2>
 						
 						<p class="pt-2">
-							Todo
+							Cette commande est en fait l'inverse de <a href="#add"><kbd>git add</kbd></a> : elle prend les modifications qui sont ajoutées dans l'<mark>index</mark> et les enlèves pour les laisser dans le <mark>workspace</mark>.
+							Ceci est effectué en ne donnant pas d'arguments à la commande ou en ne donnant que les noms / chemins des fichiers à enlever de l'index, tel que <kbd>git reset index.html</kbd>.
+						</p>
+						<hr class="mx-5">
+						<p class="mb-0">
+							<span class="font-weight-bold">Cependant</span>, cette commande ne sert pas qu'à modifier l'index, mais aussi les commits et par conséquent, le <mark>repository</mark> : ceci permet donc de retourner à un ancien commit et, selon le mode, soit en gardant les commits (<code>soft</code>), soit en détruisant les commits tout en gardant les modifications(<code>mixed</code>), soit en enlevant tout les commits ainsi que leur modifications (<code>hard</code>).
+							Cette utilisation est accessible sous la forme de <kbd>git reset --[soft, mixed, hard] [fichiers]</kbd>.
+							Ainsi, en utilisant la commande <kbd>git reset --mixed a56af8</kbd>, cela va détruire les commits jusqu'à temps que j'arrive au commit ayant l'id commençant par <code>a56af8</code> tout en gardant les modifications dans chacun des commits détruits.
+						</p>
+						<div class="bg-danger text-white py-2 px-3 mb-3">
+							<span class="font-weight-bold text-uppercase">Danger</span> : cette utilisation détruit essentiellement l'historique de la branche au quel vous effectuer cette commande, un peu comme si vous réécriviez l'histoire.
+							Pensez à deux fois avant d'utiliser cette commande pour revenir en arrière au niveau des commits, puisque une fois complétée, il n'y a pas de retour en arrière!
+						</div>
+						<p>
+							Bref, cette commande est un peu comme le "undo" de git, tout en permettant de gérer les anciens commits et de modifier les commits précédant - par contre, elle est aussi très destructrice sous certaines conditions, ainsi, il faut savoir comment bien l'utiliser.
 						</p>
 						<p class="mb-0">
 							<a href="https://git-scm.com/docs/git-reset" target="_blank">En savoir plus <img class="pl-1" src="../images/link-external.png" alt="" height="10"></a>
