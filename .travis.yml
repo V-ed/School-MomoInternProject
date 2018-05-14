@@ -7,6 +7,9 @@ notifications:
 language: node_js
 
 install:
- - pip install --user html5validator
+  - pip install --user html5validator
+  - npm install jshint
 
-script: html5validator --log INFO
+script:
+  - html5validator --log INFO
+  - jshint ./
