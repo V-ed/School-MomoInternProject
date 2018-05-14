@@ -14,12 +14,11 @@ $(function () {
 			"position": "sticky",
 			"top": stickyHeaderHeight + "px",
 			"height": "calc(100vh - " + stickyHeaderHeight + "px)",
-			"max-height": stickyContainerHeight + "px",
 			"overflow-y": "auto"
 		};
 		
-		if ($(this).data("sticky-restrain") == false) {
-			delete cssData["max-height"];
+		if ($(this).data("sticky-liberate") != true) {
+			cssData["max-height"] = stickyContainerHeight + "px";
 		}
 		
 		$(this).css(cssData);
