@@ -11,5 +11,5 @@ install:
   - npm install jshint
 
 script:
-  - html5validator --log INFO
-  - jshint ./
+  - html5validator --log INFO --blacklist node_modules/
+  - jshint ./ --exclude-path node_modules/
