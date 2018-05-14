@@ -295,8 +295,9 @@
 							<br>
 							Cependant, utiliser directement <kbd>git log</kbd> affiche beaucoup de texte et parfois, il est plus intéressant de voir le status des branches, et non des commits.
 							Ainsi, il serait parfois préférable d'ajouter des options pour ne voir qu'un résumé des commits et un status visuel pour mieux visualiser les branches :
+							<kbd>git log --graph --oneline --all</kbd>.
 							<br>
-							<kbd>git log --graph --oneline --all</kbd> Voici un exemple plus visuel :
+							Voici un exemple plus visuel :
 						</p>
 						<div class="pb-2">
 							<img class="img-fluid d-block mx-auto" src="../images/git_log.png" alt="Différences de git log">
@@ -314,6 +315,7 @@
 						<p class="pt-2">
 							Cette commande permet de savoir les modifications qui sont apportées au code en affichant les lignes enlevées et les lignes ajoutées.
 							En fait, il est important de savoir qu'une ligne modifiée, pour git, est une ligne qui est enlevée et ajoutée à nouveau.
+							Cette commande ressemble beaucoup à la commande <kbd>git status</kbd>, que vous pouvez lire <a href="#status">plus bas dans la page</a>.
 						</p>
 						<p>
 							Bref, elle sert à savoir quelles <span class="font-italic font-weight-bold">diff</span>érences sont présentes entre le dernier commit et les modifications courantes!
@@ -347,7 +349,11 @@
 						<h2 id="status" class="text-left"><code>git status</code></h2>
 						
 						<p class="pt-2">
-							Todo
+							Cette commande est un peu comme la commande <a href="#diff"><kbd>git diff</kbd></a> dans le sens où l'on peut savoir avec elle quelles modifications sont apportés au code entre le dernier commit et les modifications locales.
+							Cependant, celle-ci n'affiche pas le contenu des modifications, mais plutôt les fichiers (et leur chemins d'accès relatif à la racine du repository) qui contiennent des changements.
+						</p>
+						<p>
+							Bref, elle sert à voir le <span class="font-italic font-weight-bold">status</span> des fichiers prêt à être mis dans l'index pour être ensuite mis dans un commit.
 						</p>
 						<p class="mb-0">
 							<a href="https://git-scm.com/docs/git-status" target="_blank">En savoir plus <img class="pl-1" src="../images/link-external.png" alt="" height="10"></a>
