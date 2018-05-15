@@ -312,7 +312,7 @@
 							En créant un commit, les modifications sont appliquées dans le <mark>workspace</mark>, l'<mark>index</mark> est vidé et évidemment, un nouveau commit est créé dans le <mark>repository</mark>.
 						</p>
 						<p>
-							* En fait, il est possible de faire un commit dans passer par l'index (<span class="small">du moins, manuellement</span>) en utilisant le paramètre <kbd>-a</kbd> : <kbd>git commit -a -m "Commit sans git add!"</kbd>.
+							* En fait, il est possible de faire un commit sans passer par l'index (<span class="small">du moins, manuellement</span>) en utilisant le paramètre <kbd>-a</kbd> : <kbd>git commit -a -m "Commit sans git add!"</kbd>.
 						</p>
 						<p class="mb-0">
 							<a href="https://git-scm.com/docs/git-commit" target="_blank">En savoir plus <img class="pl-1" src="../images/link-external.png" alt="" height="10"></a>
@@ -325,8 +325,24 @@
 						<h2 id="tag" class="text-left"><code>git tag</code></h2>
 						
 						<p class="pt-2">
-							Todo
+							Cette commande sert à créer, modifier ou supprimer des <span class="font-weight-bold font-italic">tags</span>.
+							Qu'est-ce qu'un tag?
+							Un tag est un peu comme un signet : ils servent à pointer un commit et dire "<span class="lead">ce commit est important</span>".
+							Souvent, ils sont utilisés pour mettre en évidence une version particulière (exemple : <mark>v1.0.0</mark>) et ainsi pouvoir revenir à ce commit plus rapidement.
 						</p>
+						<p>
+							De plus, les services externes peuvent utiliser les informations des tags pour nous donner d'avantages de fonctionnalitées : ils peuvent servire de point de référence pour un nouveau release (<span class="font-italic">on se souvient du <mark>v1.0.0</mark></span>) ou pour mettre en évidence un commit qui pourrait provoquer des problèmes futurs.
+						</p>
+						<p class="mb-1">
+							Voici des exemples de commandes pour gérer les tags :
+						</p>
+						<ul>
+							<li><kbd>git tag v1.0.0</kbd> : Créé un tag au commit où la branche est présentement;</li>
+							<li><kbd>git tag v1.0.0 a56af8</kbd> : Créé un tag au commit spécifié après le nom du tag (<mark>a56af8</mark>);</li>
+							<li><kbd>git tag -d v1.0.0</kbd> : Supprime un tag portant le nom <mark>v1.0.0</mark>;</li>
+							<li><kbd>git push origin v1.0.0</kbd> : Envoi le tag <mark>v1.0.0</mark> sur le repository distant;</li>
+							<li><kbd>git push --tags</kbd> : Envoi tout les tags sur le repository distant (non recommandé).</li>
+						</ul>
 						<p class="mb-0">
 							<a href="https://git-scm.com/docs/git-tag" target="_blank">En savoir plus <img class="pl-1" src="../images/link-external.png" alt="" height="10"></a>
 						</p>
