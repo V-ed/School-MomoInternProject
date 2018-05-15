@@ -354,8 +354,19 @@
 						<h2 id="stash" class="text-left"><code>git stash</code></h2>
 						
 						<p class="pt-2">
-							Todo
+							Cette commande sert un peu comme un banque : on met des modifications dans un "commit" temporaire (ce n'est pas un commit mais agit comme un) et ces modifications sont enlevées du <mark>workspace</mark>, ce qui signifie que les modifications ne seront plus présentes dans le dossier local du projet.
+							Ce détail est en fait très important : le code n'est plus dans notre projet, donc le stash ne sert pas à faire un commit temporaire!
+							De plus, les modifications sont prises du <mark>workspace</mark> et de l'<mark>index</mark> : un autre détail important.
 						</p>
+						<p class="mb-1">
+							Voici quelques exemples de commandes de stash :
+						</p>
+						<ul>
+							<li><kbd>git stash push</kbd> : Créé un stash sans messages;</li>
+							<li><kbd>git stash push -m "Ajout de l'envoi de courriel"</kbd> : Créé un stash avec un message;</li>
+							<li><kbd>git stash list</kbd> : Affiche une liste des stages qui existent présentement;</li>
+							<li><kbd>git stash pop</kbd> : Enlève un stash et applique les modifications dans ce stash à nouveau. C'est l'inverse de <kbd>stash push</kbd>, en d'autres mots. C'est possible que cela provoque un conflit!</li>
+						</ul>
 						<p class="mb-0">
 							<a href="https://git-scm.com/docs/git-stash" target="_blank">En savoir plus <img class="pl-1" src="../images/link-external.png" alt="" height="10"></a>
 						</p>
