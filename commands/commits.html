@@ -303,7 +303,16 @@
 						<h2 id="commit" class="text-left"><code>git commit</code></h2>
 						
 						<p class="pt-2">
-							Todo
+							Cette commande sert à créer une "version", un commit, avec les modifications dans l'<mark>index</mark>*, vers le <mark>repository</mark> locale.
+							Dans l'image en haut, cette commande équivaut à la flèche verte.
+							En utilisant la commande telle quelle, git créer un commit contenant toutes les informations de l'index sans ajouter de message au commit : une méthode fonctionnelle mais peu recommandée.
+							Plutôt, il faudrait ajouter le paramètre <kbd>-m</kbd>, qui lui va ajouter un message au commit pour savoir facilement ce que le commit fait.
+							Ainsi, la commande pourrait ressembler à ceci : <kbd>git commit -m "Ajoute une méthode de tri à l'objet maître"</kbd>.
+							<br>
+							En créant un commit, les modifications sont appliquées dans le <mark>workspace</mark>, l'<mark>index</mark> est vidé et évidemment, un nouveau commit est créé dans le <mark>repository</mark>.
+						</p>
+						<p>
+							* En fait, il est possible de faire un commit dans passer par l'index (<span class="small">du moins, manuellement</span>) en utilisant le paramètre <kbd>-a</kbd> : <kbd>git commit -a -m "Commit sans git add!"</kbd>.
 						</p>
 						<p class="mb-0">
 							<a href="https://git-scm.com/docs/git-commit" target="_blank">En savoir plus <img class="pl-1" src="../images/link-external.png" alt="" height="10"></a>
