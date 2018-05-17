@@ -168,7 +168,66 @@
 	<main class="py-4">
 		<div class="container">
 			
-			Todo
+			<h1 class="text-center display-4 mb-4">Les flux de travail</h1>
+			
+			<section class="py-2">
+				
+				<h2 id="introduction" class="text-left">Introduction</h2>
+				
+				<p class="pt-2 lead">
+					Les flux de travail sont en fait des directives pour organiser uniformément les commits et les branches à travers une équipe et faciliter les étapes de développement, tel que l'ajout de fonctionnalités, supprimer les bugs ou préparer une nouvelle mise à jour au publique.
+				</p>
+				<p>
+					Les flux de travails ci-bas ne sont pas absolus : ils ne servent que modèles pour aider les équipes à travailler plus rapidemment, au lieu de prendre du temps pour planifier la gestion des commits et des branches elles-mêmes.
+					Ces modèles ont cependant été testés et créés spécifiquement pour subvenir aux besoins les plus courants, donc il n'y a pas de honte à les utiliser tel quel!
+				</p>
+				
+			</section>
+			
+			<section class="py-2">
+				
+				<h2 id="gitflow" class="text-left">Gitflow</h2>
+				
+				<p class="pt-2">
+					Étant le plus compliqué, il est cependant celui qui offre la plus grande flexibilité quant à la séparations de tâches et d'éléments.
+					C'est celui qui contient le plus de type de branches différents : <span class="font-italic"><code>master</code></span>, <span class="font-italic"><code>develop</code></span>, <span class="font-italic"><code>feature</code></span>, <span class="font-italic"><code>hotfix</code></span> et <span class="font-italic"><code>release</code></span>.
+					<br>
+					Voici un exemple visuel démontrant Gitflow :
+				</p>
+				<div class="py-3 text-center">
+					<img src="./images/gitflow.svg" alt="Aperçu de gitflow" style="max-height: 400px">
+				</div>
+				<p class="mb-1">
+					On peut remarquer plusieurs détails dans ce diagramme :
+				</p>
+				<ul>
+					<li>
+						<span style="background-color: #b3e3ff" class="px-1 lead">Master</span> : La branche <code>master</code> sert de branche de production : seules le travail prêt à être mis en production va dans cette branche;
+					</li>
+					<li>
+						<span style="background-color: #b18be8" class="px-1 lead">Develop</span> : La branche <code>develop</code> sert à avoir une version "beta" et sert de branche de synchronisation pour combiner toutes les nouvelles fonctionnalitées ensemble;
+					</li>
+					<li>
+						<span style="background-color: #4ed1a1" class="px-1 lead">Feature</span> : Les nouvelles fonctionnalités vont chacune dans leur propre branche, souvant sous la forme de <code>feature/[fonctionnalitée]</code> :
+					</li>
+					<ul>
+						<li>
+							Ces branches sont créées à partir de la branche <code>develop</code>, et se font <span class="font-italic">merge</span> de nouveau dans <code>develop</code>;
+						</li>
+						<li>
+							Ces branches sont de très courtes durées, soit le temps d'ajouter la fonctionnalitée. Lorsqu'elle est fonctionnelle, on la merge dans <code>develop</code> et s'il y a des problèmes, on peut les régler par la suite dans une autre branche;
+						</li>
+					</ul>
+					<li>
+						<span style="background-color: #fc8363" class="px-1 lead">Hotfix</span> : Ces branches temporaires servent pour régler rapidement un problème (un bug) qui serait trouvé dans la branche <code>master</code> (donc en production!). Lorsque le problème réglé, on peut le merge dans <code>master</code> et dans <code>develop</code> puisque si le problème est sur master, il doit forcément être sur develop aussi!
+					</li>
+					<li>
+						<span style="background-color: #4cd3d6" class="px-1 lead">Release</span> : Ces courtes branches servent à la préparation d'une nouvelle version (les notes de mises à jours, un problème à régler à la dernière minute, etc).
+						Ces branches sont particulièrement utiles lorsqu'il y a une équipe spécialisée pour les mises à jours, puisqu'elles permettent à cette équipe de travailler dans un environnement en parallèle avec la branche <code>develop</code>, permettant aux développeurs d'ajouter de nouvelles fonctionnalités en même temps sans interférer avec la mise à jour en cours.
+					</li>
+				</ul>
+				
+			</section>
 			
 		</div>
 	</main>
