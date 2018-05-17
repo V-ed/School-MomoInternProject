@@ -193,7 +193,7 @@
 							Git est un outil de gestion de code source permettant un historique de version d'un programme ou tout autres fichiers de texte brut.
 							Git organise les version en faisant des "noeuds" (appelés <span class="font-weight-bold font-italic">commits</span>) contenant les informations des modifications depuis le dernier <span class="font-italic">commit</span> créé.
 							Ceci permet de plus de savoir plus facilement les modifications apportées à chacune des "versions" puisque chaque <span class="font-italic">commit</span> doit être définit avec un résumé des modifications apportées.
-							Finalement, chaque <span class="font-italic">commit</span> contient de plus les informations de l'auteur de ce dernier, ainsi, on peut savoir facilement qui a fait quoi lorsqu'on travail en équipe.
+							Finalement, chaque <span class="font-italic">commit</span> contient de plus les informations de l'auteur de ce dernier, nous laissant ainsi savoir facilement qui a fait quoi lorsqu'on travail en équipe.
 						</p>
 						<p class="lead">
 							Vous pouvez télécharger / installer git <a href="https://git-scm.com/" target="_blank">ici</a>!
@@ -212,7 +212,8 @@
 				</div>
 				
 				<p>
-					Commençant par la gauche, chacun des cercles ici est un commit. Les commits qui divergent de la ligne du millieu forments des "branches", un concept permettant de travailler en parallèle sur différentes tâches sans affecter la version principale.
+					Commençant par la gauche, chacun des cercles ici est un commit.
+					Les commits qui divergent de la ligne du millieu forments des "branches", un concept permettant de travailler en parallèle sur différentes tâches sans affecter la version principale.
 				</p>
 				<p>
 					Ne vous inquiétez pas, vous allez comprendres pourquoi les commits font de tels chemins en continuant votre lecture!
@@ -348,11 +349,11 @@
 				</p>
 				<ol style="line-height: 1.7rem">
 					<li>On fait des modifications dans le <mark>workspace</mark> (le dossier local du projet);</li>
-					<li>On ajoute (<kbd>add</kbd>) ces modifications dans <mark>l'index</mark>, une place qui prépare les modifications à être placées dans un commit;</li>
-					<li>On effectue un <kbd>commit</kbd>, préférablement avec un message utile, qui lui va aller dans le <mark>repository local</mark>;</li>
-					<li class="pb-3 border-bottom">On effectue un <kbd>push</kbd> vers le <mark>repository partagé</mark>;</li>
-					<li class="pt-3 border-top">(optionnel) On peut <kbd>fetch</kbd> pour dire à notre <mark>repository local</mark> s'il y a des modifications dans le <mark>repository partagé</mark>;</li>
-					<li>Dans le cas où des modifications sont présentes dans le <mark>repository partagé</mark>, on peut <kbd>pull</kbd> pour ajouter les modifications distantes dans notre <mark>workspace</mark> et donc avoir les nouvelles modifications localement.</li>
+					<li>On ajoute (<a href="./commands/commits.html#add"><kbd>add</kbd></a>) ces modifications dans <mark>l'index</mark>, une place qui prépare les modifications à être placées dans un commit;</li>
+					<li>On effectue un <a href="./commands/commits.html#commit"><kbd>commit</kbd></a>, préférablement avec un message utile, qui lui va aller dans le <mark>repository local</mark>;</li>
+					<li class="pb-3 border-bottom">On effectue un <a href="./commands/sync.html#push"><kbd>push</kbd></a> vers le <mark>repository partagé</mark>;</li>
+					<li class="pt-3 border-top">(optionnel) On peut <a href="./commands/sync.html#fetch"><kbd>fetch</kbd></a> pour dire à notre <mark>repository local</mark> s'il y a des modifications dans le <mark>repository partagé</mark>;</li>
+					<li>Dans le cas où des modifications sont présentes dans le <mark>repository partagé</mark>, on peut <a href="./commands/sync.html#pull"><kbd>pull</kbd></a> pour ajouter les modifications distantes dans notre <mark>workspace</mark> et donc avoir les nouvelles modifications localement.</li>
 				</ol>
 				
 			</section>
