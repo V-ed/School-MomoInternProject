@@ -209,15 +209,15 @@
 					</li>
 					<li>
 						<span style="background-color: #4ed1a1" class="px-1 lead">Feature</span> : Les nouvelles fonctionnalités vont chacune dans leur propre branche, souvant sous la forme de <code>feature/[fonctionnalitée]</code> :
+						<ul>
+							<li>
+								Ces branches sont créées à partir de la branche <code>develop</code>, et se font <span class="font-italic">merge</span> de nouveau dans <code>develop</code>;
+							</li>
+							<li>
+								Ces branches sont de très courtes durées, soit le temps d'ajouter la fonctionnalitée. Lorsqu'elle est fonctionnelle, on la merge dans <code>develop</code> et s'il y a des problèmes, on peut les régler par la suite dans une autre branche;
+							</li>
+						</ul>
 					</li>
-					<ul>
-						<li>
-							Ces branches sont créées à partir de la branche <code>develop</code>, et se font <span class="font-italic">merge</span> de nouveau dans <code>develop</code>;
-						</li>
-						<li>
-							Ces branches sont de très courtes durées, soit le temps d'ajouter la fonctionnalitée. Lorsqu'elle est fonctionnelle, on la merge dans <code>develop</code> et s'il y a des problèmes, on peut les régler par la suite dans une autre branche;
-						</li>
-					</ul>
 					<li>
 						<span style="background-color: #fc8363" class="px-1 lead">Hotfix</span> : Ces branches temporaires servent pour régler rapidement un problème (un bug) qui serait trouvé dans la branche <code>master</code> (donc en production!). Lorsque le problème réglé, on peut le merge dans <code>master</code> et dans <code>develop</code> puisque si le problème est sur master, il doit forcément être sur develop aussi!
 					</li>
