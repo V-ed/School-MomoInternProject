@@ -194,7 +194,7 @@
 					<br>
 					Voici un exemple visuel démontrant Gitflow :
 				</p>
-				<div class="py-3 text-center">
+				<div class="pb-3 text-center">
 					<img src="./images/gitflow.svg" alt="Aperçu de gitflow" style="max-height: 400px">
 				</div>
 				<p class="mb-1">
@@ -227,7 +227,36 @@
 					</li>
 				</ul>
 				<p class="mb-0">
-					<a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow" target="_blank">En savoir plus sur GitFlow <img class="pl-1" src="../images/link-external.png" alt="" height="10"></a>
+					<a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow" target="_blank">En savoir plus sur Gitflow <img class="pl-1" src="../images/link-external.png" alt="" height="10"></a>
+				</p>
+				
+			</section>
+			
+			<section class="py-2">
+				
+				<h2 id="github-flow" class="text-left">GitHub Flow</h2>
+				
+				<p class="pt-2">
+					Ce flux de travail est probablement le plus simple : il ne décrit que le fonctionnement des modifications, rien d'autres.
+					En fait, ce flux propose l'idéologie que la branche <code>master</code> est une branche qui serait toujours prête à être mise en production.
+					<br>
+					Voici un exemple visuel de GitHub flow qui démontre à quel point il est plus facile à comprendre :
+				</p>
+				<div class="pb-3 text-center">
+					<img src="./images/github-flow.png" alt="Aperçu de github flow" style="max-height: 400px">
+				</div>
+				<p class="mb-1">
+					Analysons cette image :
+				</p>
+				<ul>
+					<li>La branche <code>master</code> serait la ligne en haut;</li>
+					<li>Une branche est créée pour faire des modifications;</li>
+					<li>Une <span class="font-italic">pull request</span> est créée pour indiquer que cette branche serait prête à être synchronisée dans <code>master</code> et que la branche aurait donc besoin d'une révision commune (l'icône environ au millieu);</li>
+					<li>Des discussions sont effectuées, des modifications suites aux discussions sont effectuées, et tout est confirmé (les bulles de discussion à droite);</li>
+					<li>Les modifications prêtes à être mises en production, la synchronisation est effectuée dans la branche <code>master</code> et le tout recommence...</li>
+				</ul>
+				<p class="mb-0">
+					<a href="https://guides.github.com/introduction/flow/" target="_blank">En savoir plus sur GitHub Flow (ainsi que l'image ci-haut dynamique!) <img class="pl-1" src="../images/link-external.png" alt="" height="10"></a>
 				</p>
 				
 			</section>
