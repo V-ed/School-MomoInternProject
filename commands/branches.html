@@ -279,8 +279,24 @@
 						<h2 id="checkout" class="text-left"><code>git checkout</code></h2>
 						
 						<p class="pt-2">
-							Todo
+							Cette commande sert à se promener de branches en branches.
+							C'est à travers cette commande que les fichiers / dossiers seront modifiés pour refléter les modifications effectuées dans la branche à <span class="font-italic">checkout</span>.
 						</p>
+						<p class="mb-0">
+							Voici quelques exemples d'utilisation de cette commande :
+						</p>
+						<ul>
+							<li>
+								<kbd>git checkout test</kbd> : Prend les modifications de la branche <mark>test</mark> dans le dossier local et considère le projet étant maintenant sur cette branche;
+							</li>
+							<li>
+								<kbd>git checkout test -f</kbd> : Exactement comme la commande précédante, mais exécute le changement de branche même si des modifications sont présentes dans le <span class="font-italic">workspace</span> et / ou dans l'<span class="font-italic">index</span>;
+							</li>
+							<li>
+								<span class="lead">Spécial</span> : <kbd>git checkout -b test2</kbd> : Cette commande fait deux choses en même temps : elle créée la branche <mark>test2</mark> (<span class="font-italic">un peu comme si on aurait fait <small><kbd>git branch test2</kbd></small>!</span>) et exécute ensuite un <kbd>git checkout test2</kbd> automatiquement!
+								Cela veut donc dire qu'avec l'option <kbd>-b</kbd>, la branche n'a pas besoin d'exister pour pouvoir la <span class="font-italic">checkout</span>!
+							</li>
+						</ul>
 						<p class="mb-0">
 							<a href="https://git-scm.com/docs/git-checkout" target="_blank">En savoir plus <img class="pl-1" src="../images/link-external.png" alt="" height="10"></a>
 						</p>
