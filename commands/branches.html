@@ -248,7 +248,25 @@
 						<h2 id="branch" class="text-left"><code>git branch</code></h2>
 						
 						<p class="pt-2">
-							Todo
+							Cette commande est celle qui gère <u>toutes</u> la gestion des branches dans un repository git local.
+							Ceci inclut leur création, leur suppression, renommer une branche et voir toutes les branches (locales et externes).
+						</p>
+						<p class="mb-0">
+							Voici une liste d'exemples de commandes pour gérer les branches dans un repository :
+						</p>
+						<ul>
+							<li><kbd>git branch test</kbd> : Créée une nouvelle branche nommée <mark>test</mark> à partir de la branche que nous sommes présentement;</li>
+							<li><kbd>git branch test2 <span class="font-italic">test</span></kbd> : Créée une nouvelle branche nommée <mark>test2</mark> étant une copie de la branche <mark>test</mark>;</li>
+							<li><kbd>git branch test <span class="font-italic">62c30a</span></kbd> : Créée une nouvelle branche nommée <mark>test</mark> à partir du commit ayant l'identifiant (compressé) <mark>62c30a</mark>;</li>
+							<li><kbd>git branch -d test</kbd> : Supprime une branche nommée <amrk>test</amrk> (<kbd>-d</kbd> pour "delete");</li>
+							<li><kbd>git branch -m ajout-tests</kbd> : Renomme la branche que nous sommes présentement pour <mark>ajout-tests</mark>;</li>
+							<li><kbd>git branch -m test ajout-tests</kbd> : Renomme la branche nommée <mark>test</mark> pour <mark>ajout-tests</mark>;</li>
+							<li><kbd>git branch -a</kbd> : Affiche une liste de toutes les branches existantes, autant locales que externes;</li>
+							<li><kbd>git branch --list</kbd> : Affiche une liste de toutes les branches locales;</li>
+							<li><kbd>git branch -r</kbd> : Affiche une liste de toutes les branches externes;</li>
+						</ul>
+						<p>
+							Alors que tous ces exemples gèrent les branches localement, quelques opérations doivent être fait à travers d'autres commandes : par exemple, pour envoyer une branche sur le repository distant, il faut utiliser <a href="./sync.html#push"><kbd>git push</kbd></a> (cliquez sur la commande pour en savoir plus) et pour aller sur une nouvelle branche, il faut utiliser <a href="#checkout"><kbd>git checkout</kbd></a>, expliquée juste en bas.
 						</p>
 						<p class="mb-0">
 							<a href="https://git-scm.com/docs/git-branch" target="_blank">En savoir plus <img class="pl-1" src="../images/link-external.png" alt="" height="10"></a>
