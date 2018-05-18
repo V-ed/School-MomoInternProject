@@ -274,7 +274,13 @@
 						<h2 id="pull" class="text-left"><code>git pull</code></h2>
 						
 						<p class="pt-2">
-							Todo
+							Cette commande sert à prendre le contenu d'une branche externe (ou une autre branche locale) et de la synchroniser sur la branche locale que nous sommes présentement.
+							Une particularité de cette commande est qu'elle exécute automatiquement au préalable un <kbd>git fetch</kbd> pour savoir si des modifications sont à <span class="font-italic">merge</span>.
+							Dans un certain sens, est exécute aussi un <kbd>git merge</kbd>.
+						</p>
+						<p>
+							Cette commande peut ainsi causer un conflit puisqu'il est possible que des modifications sur un même fichier aux mêmes lignes : communément appelé un <mark class="font-italic">merge conflict</mark>.
+							Pour en apprendre d'avantage sur les merges, continuez la lecture vers la prochaine commande : <kbd>git merge</kbd>!
 						</p>
 						<p class="mb-0">
 							<a href="https://git-scm.com/docs/git-pull" target="_blank">En savoir plus <img class="pl-1" src="../images/link-external.png" alt="" height="10"></a>
