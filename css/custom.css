@@ -43,3 +43,10 @@ h6[id]::before
 kbd {
 	white-space: nowrap;
 }
+
+pre.code {
+	background-color: #f9f9f9;
+	border: 1px solid lightgray;
+	border-radius: 4px;
+	padding: 1.2rem;
+}

@@ -293,7 +293,59 @@
 						<h2 id="merge" class="text-left"><code>git merge</code></h2>
 						
 						<p class="pt-2">
-							Todo
+							Cette commande est celle qui gère la synchronisation du <mark>workspace</mark> entre deux branches : en d'autres mots, une commande cruciale pour le travail à plusieurs.
+						</p>
+						<p>
+							Par exemple, nous sommes sur la branche <code>master</code>, et la branche <code>test</code> est prête à être <span class="font-italic">merge</span> dans <code>master</code> : nous ferions un <kbd>git merge test</kbd> et git commencera une procédure de <span class="font-italic">merge</span> pour toutes les modifications apportées dans la branche <code>test</code> pour tenter de les mettre dans <code>master</code>.
+						</p>
+						<p class="mb-1">
+							Git est cependant assez intelligent : en ne prenant en compte que les lignes qui sonts modifiées, les merges peuvent s'appliquer automatiquement et les modifications des deux branches seront présentes dans le <mark>workspace</mark>.
+						</p>
+						<p class="mb-2">
+							Par contre, le mot <span class="font-italic">assez</span> dans "<span class="font-italic">assez intelligent</span>" est mis de l'avant : malgré que git gère habituellement bien les merges, il est possible que des conflits entre modifications surviennent.
+							Ces conflits sont communément nommés des <span class="font-italic font-weight-bold">merge conflicts</span> et ressemblent à ceci :
+						</p>
+						<pre class="code mb-2">
+							<span class="lead">Liste.txt</span>
+							<hr class="mt-2 mb-0">
+							Équipe Finances
+							- Charles
+							- Lisa
+							- John
+							<span class="text-danger"><<<<<<< HEAD</span>		<span class="text-warning">[ <-- prendre note!]</span>
+							- Stacy
+							- Alexander
+							<span class="text-danger">=======</span>			<span class="text-warning">[ <-- prendre note!]</span>
+							- Morgan
+							- Amanda
+							<span class="text-danger">>>>>>>> test</span>		<span class="text-warning">[ <-- prendre note!]</span>
+						</pre>
+						<p class="mb-2">
+							Dans cet exemple, on pourrait imaginer que nous avons ajouter deux personnes dans la liste de l'équipe des finances : Stacy et Alexander.
+							Cependant, dans cette liste, une autre personne avait déjà ajouter Morgan et Amanda, mais cela dans la branche <code>test</code>.
+							Git, n'ayant pas réussi à synchroniser les changements deux deux côté, indique qu'il y a un conflit en ajoutant dans le fichier des <span class="font-weight-bold">indicateurs de conflits</span>, soit le <span class="text-danger"><tt><<<<<<< HEAD</tt></span>, <span class="text-danger"><tt>=======</tt></span> et le <span class="text-danger"><tt>>>>>>>>> test</tt></span>.
+						</p>
+						<p class="mb-2">
+							Ces indicateurs affichent à quelle branches appartient les modifications : entre "<span class="text-danger"><tt><<<<<<< HEAD</tt></span>" et "<span class="text-danger"><tt>=======</tt></span>", on y retrouve <u>nos</u> modifications, tandis que entre "<span class="text-danger"><tt>=======</tt></span>" et "<span class="text-danger"><tt>>>>>>>>> test</tt></span>", on y retrouve les modifications apportées par d'<u>autres</u> personnes dans la branche <code>test</code>.
+							C'est donc à notre tour de régler ce conflit, simplement en modifiant le fichier comme on le souhaite, en quelque sorte faisant le merge nous-même :
+						</p>
+						<pre class="code mb-2">
+							<span class="lead">Liste.txt</span>
+							<hr class="mt-2 mb-0">
+							Équipe Finances
+							- Charles
+							- Lisa
+							- John
+							- Morgan
+							- Amanda
+							- Stacy
+							- Alexander
+						</pre>
+						<p>
+							Le merge étant maintenant complété dans ce fichier, nous pouvons l'ajouter à l'index en faisant un <a href="./commits.html#add" target="_blank"><kbd>git add Liste.txt</kbd></a> (cette commande va en même temps dire à git que le conflit est résolu!) et continuer à faire le merge en créant le <span class="font-italic font-weight-bold">merge commit</span>.
+						</p>
+						<p>
+							Plusieurs autres manières pour merge des commits existe (<span class="font-italic">rebase</span>, <span class="font-italic">fast forward / not fast forward</span>, etc), donc étant un concepte plus facile à comprendre lorsque présenté sous forme visuelle, <a href="https://www.youtube.com/watch?v=XX-Kct0PfFc" target="_blank">voici une vidéo</a> qui explique bien le concepte du merge!
 						</p>
 						<p class="mb-0">
 							<a href="https://git-scm.com/docs/git-merge" target="_blank">En savoir plus <img class="pl-1" src="../images/link-external.png" alt="" height="10"></a>
