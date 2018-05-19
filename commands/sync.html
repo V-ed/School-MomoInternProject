@@ -307,31 +307,31 @@
 						</p>
 						<pre class="code mb-2">
 							<span class="lead">Liste.txt</span>
-							<hr class="mt-2 mb-0">
+							------------------------
 							Équipe Finances
 							- Charles
 							- Lisa
 							- John
-							<span class="text-danger">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>		<span class="text-warning">[ <-- prendre note!]</span>
+							<span class="text-danger">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>		<span class="text-warning">[ &lt;-- prendre note!]</span>
 							- Stacy
 							- Alexander
-							<span class="text-danger">=======</span>			<span class="text-warning">[ <-- prendre note!]</span>
+							<span class="text-danger">=======</span>			<span class="text-warning">[ &lt;-- prendre note!]</span>
 							- Morgan
 							- Amanda
-							<span class="text-danger">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; test</span>		<span class="text-warning">[ <-- prendre note!]</span>
+							<span class="text-danger">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; test</span>		<span class="text-warning">[ &lt;-- prendre note!]</span>
 						</pre>
 						<p class="mb-2">
 							Dans cet exemple, on pourrait imaginer que nous avons ajouter deux personnes dans la liste de l'équipe des finances : Stacy et Alexander.
 							Cependant, dans cette liste, une autre personne avait déjà ajouter Morgan et Amanda, mais cela dans la branche <code>test</code>.
-							Git, n'ayant pas réussi à synchroniser les changements deux deux côté, indique qu'il y a un conflit en ajoutant dans le fichier des <span class="font-weight-bold">indicateurs de conflits</span>, soit le <span class="text-danger"><tt>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</tt></span>, <span class="text-danger"><tt>=======</tt></span> et le <span class="text-danger"><tt>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; test</tt></span>.
+							Git, n'ayant pas réussi à synchroniser les changements deux deux côté, indique qu'il y a un conflit en ajoutant dans le fichier des <span class="font-weight-bold">indicateurs de conflits</span>, soit le <span class="text-danger"><samp>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</samp></span>, <span class="text-danger"><samp>=======</samp></span> et le <span class="text-danger"><samp>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; test</samp></span>.
 						</p>
 						<p class="mb-2">
-							Ces indicateurs affichent à quelle branches appartient les modifications : entre "<span class="text-danger"><tt>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</tt></span>" et "<span class="text-danger"><tt>=======</tt></span>", on y retrouve <u>nos</u> modifications, tandis que entre "<span class="text-danger"><tt>=======</tt></span>" et "<span class="text-danger"><tt>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; test</tt></span>", on y retrouve les modifications apportées par d'<u>autres</u> personnes dans la branche <code>test</code>.
+							Ces indicateurs affichent à quelle branches appartient les modifications : entre "<span class="text-danger"><samp>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</samp></span>" et "<span class="text-danger"><samp>=======</samp></span>", on y retrouve <u>nos</u> modifications, tandis que entre "<span class="text-danger"><samp>=======</samp></span>" et "<span class="text-danger"><samp>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; test</samp></span>", on y retrouve les modifications apportées par d'<u>autres</u> personnes dans la branche <code>test</code>.
 							C'est donc à notre tour de régler ce conflit, simplement en modifiant le fichier comme on le souhaite, en quelque sorte faisant le merge nous-même :
 						</p>
 						<pre class="code mb-2">
 							<span class="lead">Liste.txt</span>
-							<hr class="mt-2 mb-0">
+							------------------------
 							Équipe Finances
 							- Charles
 							- Lisa
