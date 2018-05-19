@@ -374,8 +374,23 @@
 						<h2 id="push" class="text-left"><code>git push</code></h2>
 						
 						<p class="pt-2">
-							Todo
+							Cette commande envoi les informations au repository externe. En bref, c'est un peu comme un "upload" : on peut tout envoyer avec elle, en passant par les <a href="./commits.html#commit">commits</a>, les <a href="./branches.html#branch">branches</a> ainsi que les <a href="./commits.html#tag">tags</a>.
 						</p>
+						<p class="mb-2">
+							Il est possible que pendant un push, git empêche l'opération de se poursuivre : dans le cas où la branche externe est devancée de quelques commits, en essayant de faire <kbd>git push origin</kbd>, git indique que la branche externe est devant vous et vous devez merge la branche externe avant de continuer.
+							Bref, il faut remplir quelques conditions pour que le <kbd>git push</kbd> se fasse sans problèmes.
+						</p>
+						<p>
+							À noter cependant qu'il faut spécifier à quel référence il faut envoyer les informations (<code>origin</code> dans mon exemple du paragraphe précédent!); par défaut, git utilise la <span class="font-italic">ref</span> "<code>origin</code>" pour faire les liens, et tout autre référence est un niveau plus avancé de git, donc je n'en discutera pas plus, vous allez devoir faire vos propre recherches pour ça. :)
+						</p>
+						<p class="mb-2">
+							Voici quelques exemples d'utilisation de cette commande :
+						</p>
+						<ul>
+							<li><kbd>git push</kbd> : Fait un git push normal en utilisant (<span class="font-italic">par défaut!!</span>) la référence <code>origin</code>;</li>
+							<li><kbd>git push -u origin test</kbd> : Envoit les informations de la branche <code>test</code> à la référence <code>origin</code> et créer les liaisons nécessaires;</li>
+							<li><kbd>git push origin v1.0.0</kbd> : Envoit les informations d'un tag nommé (<code>v1.0.0</code>).</li>
+						</ul>
 						<p class="mb-0">
 							<a href="https://git-scm.com/docs/git-push" target="_blank">En savoir plus <img class="pl-1" src="../images/link-external.png" alt="" height="10"></a>
 						</p>
